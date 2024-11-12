@@ -1,0 +1,277 @@
+/* html */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    overflow-y: auto;
+    /* background-color: lightblue; */
+    background: linear-gradient(lightblue, #72b9d1, #3472c4);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* navigasi */
+header {
+    display: block;
+    width: 100%;
+    background-color: yellow;
+    text-align: center;
+    padding: 1.2vh 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+header nav {
+    display: inline-flex;
+    gap: 10vw;
+}
+
+header nav a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    transition: all 0.2s ease-out;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: tomato;
+}
+
+
+/* judul */
+h2 {
+    font-size: 2em;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+
+/* content */
+main {
+    display: block;
+}
+
+.cover {
+    position: relative;
+}
+
+.cover img {
+    width: 100%;
+}
+
+.judul {
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    font-size: 10vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* article */
+.article1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+
+.article1::-webkit-scrollbar {
+    display: none;
+}
+
+.article1 img {
+    width: 20vh;
+    height: 20vh;
+    display: block;
+    background-color: rgb(229, 255, 36);
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* article */
+.article2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    padding: 0 5vw;
+    letter-spacing: 0px;
+    /* line-height: 15px; */
+    text-indent: 20px;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.article2 p {
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+
+/* article */
+.article3 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.article3 img {
+    width: 70%;
+}
+
+.article3 .video {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.article3 .video a div {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.article3 .video a .youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    text-shadow: 0px 56px black;
+}
+
+
+/* monster ads */
+main .ads {
+    position: relative;
+}
+
+main .ads .boros {
+    display: none;
+    width: auto;
+    height: 500px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    z-index: 999;
+    animation: boros 1.5s infinite ease-in-out;
+    transition: transform 1s ease;
+}
+
+@keyframes boros {
+    0% {
+        transform: translate(0%, 10px);
+    }
+
+    50% {
+        transform: translate(0%, -10px);
+    }
+
+    100% {
+        transform: translate(0%, 10px);
+    }
+}
+
+@keyframes hidden {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+        filter: blur(10px);
+        visibility: hidden;
+    }
+}
+
+main .ads .garou {
+    display: none;
+    width: auto;
+    height: 800px;
+    position: fixed;
+    top: 0vh;
+    left: 10vw;
+    z-index: 999;
+    animation: garou 1.5s infinite ease-in-out;
+}
+
+@keyframes garou {
+    0% {
+        transform: translate(0%, 10px);
+    }
+
+    50% {
+        transform: translate(0%, -10px);
+    }
+
+    100% {
+        transform: translate(0%, 10px);
+    }
+}
+
+@keyframes hidden2 {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        left: 100vw;
+        top: 20vh;
+        transform: scale(0.1) rotate(360deg);
+        filter: blur(10px);
+    }
+}
+
+/* saitama ads */
+.hero {
+    cursor: pointer;
+}
+
+
+.saitama {
+    display: none;
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+@keyframes es {
+    0% {
+        top: 100vh;
+    }
+
+    15%, 75% {
+        top: 0vh;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
