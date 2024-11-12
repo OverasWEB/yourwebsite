@@ -22,32 +22,33 @@ body::-webkit-scrollbar {
 
 /* navigasi */
 header {
-    display: block;
-    width: 100%;
     background-color: yellow;
     text-align: center;
-    padding: 1.2vh 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 0.7em;
+    background-color: orange;
     position: sticky;
-    top: 0;
+    top: -1px;
+    gap: 10px;
     z-index: 99;
 }
 
-header nav {
-    display: inline-flex;
-    gap: 10vw;
-}
-
-header nav a {
+nav a {
+    width: 100%;
+    font-size: 1.3em;
     text-decoration: none;
     cursor: pointer;
     color: black;
     transition: all 0.2s ease-out;
-    font-size: 1.8em;
-    font-weight: bold;
 }
 
-header nav a:hover {
-    color: tomato;
+nav a:hover {
+    color: white;
 }
 
 
@@ -267,7 +268,8 @@ main .ads .garou {
         top: 100vh;
     }
 
-    15%, 75% {
+    15%,
+    75% {
         top: 0vh;
     }
 
