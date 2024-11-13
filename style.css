@@ -31,6 +31,7 @@ nav {
     display: flex;
     text-align: center;
     font-size: 0.7em;
+    padding: 0.5em 0;
     background-color: orange;
     position: sticky;
     top: -1px;
